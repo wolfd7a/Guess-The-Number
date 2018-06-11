@@ -20,12 +20,8 @@ def GoAgain() :
         RaiseException()
         GoAgain()
 
-def ComputerChoice() :
-    ComputerNumber  = random.randint(1, 50)
-    return(ComputerNumber)
-
-
 def GuessTheNumber() :
+    ComputerNumber  = random.randint(1, 50)
     choice=0
     while choice==0 :
         Guess = input("What number did I just think about ?")
@@ -35,6 +31,7 @@ def GuessTheNumber() :
             break
         except :
             WrongValue()
+    while 
     if Guess > ComputerChoice() :
             print('Lower')
             GuessTheNumber()
