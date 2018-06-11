@@ -21,23 +21,24 @@ def GoAgain() :
         GoAgain()
 
 def GuessTheNumber() :
-    ComputerNumber  = random.randint(1, 50)
+    ComputerNumber  = random.randint(1, 1)
     choice=0
     while choice==0 :
         Guess = input("What number did I just think about ?")
         try :
             int(Guess)
             choice=1
-            break
+            while int(Guess)!= int(ComputerNumber) :
+                if int(Guess) > int(ComputerNumber) :
+                    print('Lower')
+                    choice=0
+                    break        
+                else :
+                    print('Higher !')
+                    choice=0
+                    break
         except :
             WrongValue()
-    while Guess!= ComputerNumber :
-        if Guess > ComputerNumber :
-                print('Lower')
-                GuessTheNumber()
-        else :
-            print('Higher !')
-            GuessTheNumber()
     print('You got it !')
     GoAgain()
 
