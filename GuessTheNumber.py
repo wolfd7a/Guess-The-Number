@@ -31,16 +31,14 @@ def GuessTheNumber() :
             break
         except :
             WrongValue()
-    while 
-    if Guess > ComputerChoice() :
-            print('Lower')
+    while Guess!= ComputerNumber :
+        if Guess > ComputerNumber :
+                print('Lower')
+                GuessTheNumber()
+        else :
+            print('Higher !')
             GuessTheNumber()
-    elif Guess < ComputerChoice() :
-        print('Higher !')
-        GuessTheNumber()
-    else :
-        print('You got it !')
-        GoAgain()
+    print('You got it !')
+    GoAgain()
 
-ComputerChoice()
 GuessTheNumber()
